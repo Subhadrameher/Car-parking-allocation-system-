@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ParkFlow | Sign in</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="auth-page">
+    <main class="auth-shell">
+        <section class="auth-brand">
+            <div class="brand-mark">P</div>
+            <p class="eyebrow">SMART PARKING PLATFORM</p>
+            <h1>Parking made<br><span>effortless.</span></h1>
+            <p>Find a space, reserve your spot and get moving. One simple platform for drivers and parking teams.</p>
+            <div class="auth-points"><span>✓ Live slot availability</span><span>✓ Secure online payments</span><span>✓
+                    Instant digital receipts</span></div>
+        </section>
+        <section class="auth-card">
+            <div class="brand"><span class="brand-mark small">P</span> ParkFlow</div>
+            <p class="eyebrow">WELCOME BACK</p>
+            <h2>Sign in to continue</h2>
+            <p class="muted">Choose your portal and enter your credentials.</p>
+            <form id="loginForm" class="stack"><label>Email address<input id="email" type="email" class="input"
+                        placeholder="you@example.com" required></label><label>Password<input id="password"
+                        type="password" class="input" placeholder="Enter password" required></label><label>Portal<select
+                        id="role" class="input">
+                        <option value="user">User portal</option>
+                        <option value="admin">Admin portal</option>
+                    </select></label><button class="btn primary wide">Sign in <span>→</span></button></form>
+            <div class="demo-box"><strong>Demo access</strong>
+                <p>User: user@parkflow.demo / user123</p>
+                <p>Admin: admin@parkflow.demo / admin123</p><small>Accounts are checked by the Spring Boot server. Demo
+                    credentials are preloaded into MySQL.</small>
+            </div>
+            <p id="loginMessage" class="form-message"></p>
+        </section>
+    </main>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/parking.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+
+</html>

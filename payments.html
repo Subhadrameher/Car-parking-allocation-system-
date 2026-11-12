@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Payments | ParkFlow</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="dashboard.html"><span class="brand-mark small">P</span>
+                ParkFlow</a>
+            <p class="nav-caption">ADMIN WORKSPACE</p>
+            <nav><a class="nav-link" href="dashboard.html">▦ Overview</a><a class="nav-link" href="parking-slots.html">▤
+                    Parking slots</a><a class="nav-link" href="vehicles.html">▣ Vehicles</a><a class="nav-link active"
+                    href="payments.html">₹ Payments</a><a class="nav-link" href="reports.html">▥ Reports</a></nav>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ADMIN / FINANCE</p>
+                    <h1>Payment records</h1>
+                    <p class="muted">Review payment statuses and transaction references.</p>
+                </div><button class="btn outline" data-logout>Sign out</button>
+            </header>
+            <section class="panel">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Booking</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Payment ID</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paymentTable"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/parking.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/admin.js"></script>
+</body>
+
+</html>

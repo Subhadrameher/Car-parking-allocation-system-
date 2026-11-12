@@ -1,0 +1,80 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reports | ParkFlow</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="dashboard.html">
+                <span class="brand-mark small">P</span>
+                ParkFlow
+            </a>
+
+            <p class="nav-caption">ADMIN WORKSPACE</p>
+
+            <nav>
+                <a class="nav-link" href="dashboard.html">▦ Overview</a>
+                <a class="nav-link" href="parking-slots.html">▤ Parking slots</a>
+                <a class="nav-link" href="vehicles.html">▣ Vehicles</a>
+                <a class="nav-link" href="payments.html">₹ Payments</a>
+                <a class="nav-link active" href="reports.html">▥ Reports</a>
+            </nav>
+
+            <div class="sidebar-bottom">● System operational</div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ADMIN / ANALYTICS</p>
+                    <h1>Reports</h1>
+                    <p class="muted">A summary of your parking operations.</p>
+                </div>
+
+                <button class="btn outline" data-logout>Sign out</button>
+            </header>
+
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <span>Total bookings</span>
+                    <strong id="reportBookings">0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>Paid revenue</span>
+                    <strong id="reportRevenue">₹0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>Active sessions</span>
+                    <strong id="reportActive">0</strong>
+                </article>
+
+                <article class="stat-card">
+                    <span>Paid transactions</span>
+                    <strong id="reportPaid">0</strong>
+                </article>
+            </section>
+
+            <section class="panel">
+                <h2>Revenue by day</h2>
+                <p class="muted">Paid revenue collected over the last seven days.</p>
+                <div id="reportBars" class="bar-chart"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/parking.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/admin.js"></script>
+</body>
+
+</html>

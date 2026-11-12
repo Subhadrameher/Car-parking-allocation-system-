@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin Dashboard | ParkFlow</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="dashboard.html"><span class="brand-mark small">P</span>
+                ParkFlow</a>
+            <p class="nav-caption">ADMIN WORKSPACE</p>
+            <nav><a class="nav-link active" href="dashboard.html">▦ Overview</a><a class="nav-link"
+                    href="parking-slots.html">▤ Parking slots</a><a class="nav-link" href="vehicles.html">▣
+                    Vehicles</a><a class="nav-link" href="payments.html">₹ Payments</a><a class="nav-link"
+                    href="reports.html">▥ Reports</a></nav>
+            <div class="sidebar-bottom"><span class="status-dot"></span> System operational<br><small>Admin
+                    workspace</small></div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ADMIN / OVERVIEW</p>
+                    <h1>Dashboard</h1>
+                    <p class="muted">Monitor your parking facility in real time.</p>
+                </div>
+                <div class="top-actions"><span class="avatar">AD</span><button class="btn outline" data-logout>Sign
+                        out</button></div>
+            </header>
+            <section class="stats-grid">
+                <article class="stat-card"><span>Total spaces</span><strong id="totalSlots">48</strong><small>Configured
+                        capacity</small></article>
+                <article class="stat-card"><span>Occupied</span><strong id="occupiedSlots">0</strong><small>Currently
+                        parked</small></article>
+                <article class="stat-card"><span>Available</span><strong id="availableSlots">48</strong><small>Ready to
+                        book</small></article>
+                <article class="stat-card"><span>Revenue today</span><strong
+                        id="revenueToday">₹0</strong><small>Verified payments</small></article>
+            </section>
+            <section class="content-grid">
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Parking occupancy</h2>
+                            <p class="muted">Live status across all zones</p>
+                        </div><a class="text-link" href="parking-slots.html">Manage slots →</a>
+                    </div>
+                    <div class="occupancy">
+                        <div class="ring" id="occupancyRing">
+                            <div><strong id="occupancyRate">0%</strong><small>occupied</small></div>
+                        </div>
+                        <div class="legend">
+                            <p><i class="dot available"></i>Available <b id="legendAvailable">48</b></p>
+                            <p><i class="dot occupied"></i>Occupied <b id="legendOccupied">0</b></p>
+                            <p><i class="dot reserved"></i>Reserved <b id="legendReserved">0</b></p>
+                        </div>
+                    </div>
+                </article>
+                <article class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Quick actions</h2>
+                            <p class="muted">Common operations</p>
+                        </div>
+                    </div>
+                    <div class="quick-actions"><a href="parking-slots.html">＋ Add / manage slots</a><a
+                            href="vehicles.html">＋ Register vehicle</a><a href="payments.html">↗ View payments</a></div>
+                </article>
+            </section>
+            <section class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Recent parking sessions</h2>
+                        <p class="muted">Latest activity</p>
+                    </div><a class="text-link" href="vehicles.html">View all →</a>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Vehicle</th>
+                                <th>Customer</th>
+                                <th>Slot</th>
+                                <th>Check-in</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recentSessions"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/parking.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/admin.js"></script>
+</body>
+
+</html>

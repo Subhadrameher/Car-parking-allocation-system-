@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Parking Slots | ParkFlow</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="dashboard.html"><span class="brand-mark small">P</span>
+                ParkFlow</a>
+            <p class="nav-caption">ADMIN WORKSPACE</p>
+            <nav><a class="nav-link" href="dashboard.html">▦ Overview</a><a class="nav-link active"
+                    href="parking-slots.html">▤ Parking slots</a><a class="nav-link" href="vehicles.html">▣
+                    Vehicles</a><a class="nav-link" href="payments.html">₹ Payments</a><a class="nav-link"
+                    href="reports.html">▥ Reports</a></nav>
+            <div class="sidebar-bottom">● System operational</div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ADMIN / OPERATIONS</p>
+                    <h1>Parking slots</h1>
+                    <p class="muted">Inspect availability and manage your spaces.</p>
+                </div><button class="btn outline" data-logout>Sign out</button>
+            </header>
+            <section class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Facility map</h2>
+                        <p class="muted">Select a slot to inspect its current status.</p>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:15px;flex-wrap:wrap">
+                        <div class="slot-legend">
+                            <span>🟢 Available</span>
+                            <span>🔴 Occupied</span>
+                            <span>🟠 Reserved</span>
+                        </div>
+
+                        <button class="btn primary" id="adminAddBooking" type="button">
+                            + Add Booking
+                        </button>
+                    </div>
+                </div>
+                <div id="adminSlotGrid" class="slot-grid"></div>
+            </section>
+            <section class="panel">
+                <h2>Selected slot</h2>
+                <div id="slotInfo" class="muted">Choose a slot above.</div>
+            </section>
+        </main>
+    </div>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/parking.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+package com.parkflow.repo;import com.parkflow.model.Booking;import org.springframework.data.jpa.repository.JpaRepository;import java.util.*;public interface BookingRepository extends JpaRepository<Booking,String>{List<Booking> findByEmailOrderByCreatedAtDesc(String email);List<Booking> findAllByOrderByCreatedAtDesc();}

@@ -1,0 +1,3 @@
+package com.parkflow.security;
+import com.parkflow.model.AppUser;import org.springframework.stereotype.Component;import java.util.*;import java.util.concurrent.ConcurrentHashMap;
+@Component public class SessionStore{public record Principal(Long id,String name,String email,String role){}private final Map<String,Principal> sessions=new ConcurrentHashMap<>();public String create(AppUser u){String token=UUID.randomUUID().toString();sessions.put(token,new Principal(u.id,u.name,u.email,u.role));return token;}public Principal get(String token){return sessions.get(token);}public void remove(String token){sessions.remove(token);}}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vehicles | ParkFlow</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar"><a class="brand" href="dashboard.html"><span class="brand-mark small">P</span>
+                ParkFlow</a>
+            <p class="nav-caption">ADMIN WORKSPACE</p>
+            <nav><a class="nav-link" href="dashboard.html">▦ Overview</a><a class="nav-link" href="parking-slots.html">▤
+                    Parking slots</a><a class="nav-link active" href="vehicles.html">▣ Vehicles</a><a class="nav-link"
+                    href="payments.html">₹ Payments</a><a class="nav-link" href="reports.html">▥ Reports</a></nav>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ADMIN / OPERATIONS</p>
+                    <h1>Vehicle sessions</h1>
+                    <p class="muted">View arrivals, active sessions and completed visits.</p>
+                </div><button class="btn outline" data-logout>Sign out</button>
+            </header>
+            <section class="panel">
+                <div class="toolbar"><input id="vehicleSearch" class="input"
+                        placeholder="Search registration or customer"><select id="vehicleStatus" class="input">
+                        <option value="all">All sessions</option>
+                        <option value="active">Active</option>
+                        <option value="completed">Completed</option>
+                    </select></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Registration</th>
+                                <th>Customer</th>
+                                <th>Type</th>
+                                <th>Slot</th>
+                                <th>Check-in</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vehicleTable"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/parking.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+package com.parkflow.security;
+import jakarta.servlet.*;import jakarta.servlet.http.*;import org.springframework.stereotype.Component;import org.springframework.web.filter.OncePerRequestFilter;import java.io.IOException;
+@Component public class TokenFilter extends OncePerRequestFilter{private final SessionStore sessions;public TokenFilter(SessionStore s){sessions=s;}@Override protected void doFilterInternal(HttpServletRequest req,HttpServletResponse res,FilterChain chain)throws ServletException,IOException{String h=req.getHeader("Authorization");if(h!=null&&h.startsWith("Bearer ")){var p=sessions.get(h.substring(7));if(p!=null)req.setAttribute("principal",p);}chain.doFilter(req,res);}}
